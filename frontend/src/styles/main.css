@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-200 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-600 focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-dark-100 text-white hover:bg-dark-200 focus:ring-dark-100;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-accent-dark focus:ring-accent;
+  }
+  
+  .btn-danger {
+    @apply btn bg-danger text-white hover:bg-red-600 focus:ring-danger;
+  }
+  
+  .btn-ghost {
+    @apply btn bg-transparent text-white hover:bg-dark-100 focus:ring-dark-100;
+  }
+  
+  .card {
+    @apply bg-dark-50 rounded-2xl p-6 shadow-lg transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-xl hover:scale-[1.02] cursor-pointer;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 bg-dark-100 border border-dark-200 rounded-lg text-white placeholder-dark-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-dark-300 mb-2;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .glass {
+    @apply bg-dark-50/50 backdrop-blur-lg border border-dark-100/50;
+  }
+  
+  .animate-stagger > * {
+    @apply animate-slide-up;
+  }
+  
+  .animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 50ms; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 100ms; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 150ms; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 200ms; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 250ms; }
+  .animate-stagger > *:nth-child(7) { animation-delay: 300ms; }
+  .animate-stagger > *:nth-child(8) { animation-delay: 350ms; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
